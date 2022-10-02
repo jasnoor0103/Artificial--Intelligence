@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timeline </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" type="image/x-icon" href="AI LOGO.png">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+</style>
+</head>
+<body>
+  <style>
+
+
+
+
+  
+  #mySidenav a {
+  position: absolute;
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#about {
+  top: 0px;
+  background-color: #04AA6D;
+
+}
+#blog {
+  top: 60px;
+  background-color: #2196F3;
+}
+
+#projects {
+  top: 120px;
+  background-color: #f44336;
+}
+#timeline {
+  top: 180px;
+  background-color: #ffa500
+}
+#contact {
+  top: 240px;
+  background-color: #555
+}
+ 
+
+
+     
+  
+          
+    
+
+    
+ 
+
+</style>
+  <center>
+<h1 style="font-size:80px;font-family:calbri;color: black;">A Brief History Of Artificial Intelligence</h1>
+<p style="font-size:60px;font-family:calbri;color: red;"> A Timeline from 1942 to 2014</p>
+
+ </center>
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>1942</h2>
+      <p>The Enigma machine was decoded using AI,during WW-II.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>1950</h2>
+      <p>Alan Turing released a test to test for Machine Intelligence.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>1955</h2>
+      <p>John McCarthy-The Father Of AI, was the first to coin the term.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>1961</h2>
+      <p>The introduction of Unimate, the first industrial robot .</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>1964</h2>
+      <p>The first chatbot was invented by Joseph Wiezenbaum.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>1969</h2>
+      <p>Shakey-the first general purpose mobile robot was introduced .</p>
+    </div>
+  </div>
+
+
+   <div class="container left">
+    <div class="content">
+      <h2>1997</h2>
+      <p>Supercomputer Deepblue beats chess legend Garry Kasparov.</p>
+    </div>
+  </div>
+
+
+ <div class="container right">
+    <div class="content">
+      <h2>1998</h2>
+      <p>The birth of Kismet, a robot equipped with emotions .</p>
+    </div>
+  </div>
+
+
+
+   <div class="container left">
+    <div class="content">
+      <h2>2002</h2>
+      <p>Roomba-a highly efficient AI-powered vacuum cleaner.</p>
+    </div>
+  </div>
+
+
+  
+ <div class="container right">
+    <div class="content">
+      <h2>2011</h2>
+      <p>Introduction of Siri, a voice-assistant powered by Apple</p>
+    </div>
+  </div>
+
+
+ <div class="container left">
+    <div class="content">
+      <h2>2011</h2>
+      <p>IBM-Watson-A question-answering computer system .</p>
+    </div>
+  </div>
+
+
+ <div class="container right">
+    <div class="content">
+      <h2>2014</h2>
+      <p>Alexa, a virtual-assistant system developed by Amazon.</p>
+    </div>
+  </div>
+
+
+  
+
+  
+</div>
+
+<center>
+  <hr size=5 color=white >
+  	<div style="font-size:30;font-family:Segoe Print;color:white">
+     <b>Designed by ---Jaspal Kaur Public School</b>
+     </div>
+   	<hr size=5 color=white >
+  </center>
+<div id="mySidenav" class="sidenav">
+  <a href="index.html" id="about">Home</a>
+  <a href="AI.html" id="blog">AI</a>
+  <a href="product.html" id="projects">Products</a>
+  <a href="timeline.html" id="timeline">Timeline</a>
+  <a href="chatbot.html" id="contact">Chatbot</a>
+</div>
+
+</body>
+</html>
+
+
